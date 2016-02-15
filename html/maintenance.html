@@ -2,17 +2,34 @@
 <title>Site Maintenance</title>
 <style>
   body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
+  h1 { font-size: 20px; }
+  body { font: 16px Helvetica, sans-serif; color: #333; }
   article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
+  a { color: #ea524c; text-decoration: none; }
+  a:hover { color: #ea524c; text-decoration: none; }
 </style>
 
-<article>
+<article id="msg_fr">
+    <h1>Nous serons bient&ocirc;t de retour!</h1>
+    <div>
+    	<p>D&eacute;sol&eacute; pour le d&eacute;sagr&eacute;ment. Nous sommes en train d'effectuer des travaux de maintenance pour le moment. Si besoin, vous pouvez toujours <a href="http://www.limber.io/contactez-nous/" target="_blank">nous contacter</a> sinon nous serons bient&ocirc;t de retour!
+    	</p>
+        <p>&mdash; L'&eacute;quipe Limber</p>
+    </div>
+</article>
+
+<article id="msg_en">
     <h1>We&rsquo;ll be back soon!</h1>
     <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:support@limber.io">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
+        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="http://www.limber.io/en/contact-us/" target="_blank">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
         <p>&mdash; The Limber Team</p>
     </div>
 </article>
+
+<script>
+	var language = window.navigator.userLanguage || window.navigator.language;
+	if(language && language.startsWith('fr'))
+		document.getElementById('msg_en').remove();
+	else
+		document.getElementById('msg_fr').remove();
+</script>
